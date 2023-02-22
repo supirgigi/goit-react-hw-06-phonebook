@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
 import { Form, Input, Label, Button } from './ContactForm.styled';
 
 const initialState = {
@@ -20,7 +19,7 @@ const ContactForm = ({ onSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const newContact = { id: nanoid(), ...state };
+    const newContact = { ...state };
     onSubmit(newContact);
     setState({ ...initialState });
   };

@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
       'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
@@ -31,3 +31,5 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 `;
+
+export default GlobalStyle;

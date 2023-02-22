@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Form = styled.form`
   width: 100%;
   margin-bottom: ${props => props.theme.spacing(6)};
-  padding: ${props => props.theme.spacing(4)}
-    ${props => props.theme.spacing(10)};
+  padding: ${props => props.theme.spacing(4)};
+  ${props => props.theme.spacing(10)};
   display: flex;
   flex-direction: column;
   align-items: center;
