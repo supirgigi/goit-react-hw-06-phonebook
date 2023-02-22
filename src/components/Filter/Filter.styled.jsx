@@ -5,7 +5,6 @@ export const Label = styled.label`
   flex-direction: column;
   gap: ${props => props.theme.spacing(1)};
   width: 240px;
-  margin-bottom: ${props => props.theme.spacing(4)};
 `;
 
 export const Input = styled.input`

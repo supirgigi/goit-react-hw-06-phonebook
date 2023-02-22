@@ -1,11 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import { addContact, deleteContact } from 'redux/contacts/contacts-slice';
-import { setFilter } from 'redux/filter/filter-slice';
-
 import ContactForm from 'components/ContactForm';
 import ContactList from 'components/ContactList';
 import Filter from 'components/Filter';
+import { addContact, deleteContact } from 'redux/contacts/contacts-slice';
+import { setFilter } from 'redux/filter/filter-slice';
 
 import {
   getContacts,
@@ -44,7 +43,9 @@ const App = () => {
       <ContactForm onSubmit={handleSubmit} />
       <ContactsTitle>Contacts</ContactsTitle>
       <Filter value={filter} onChange={handleFilter} />
-      <ContactList contacts={filteredContacts} onDelete={handleDelete} />
+      {contacts.length > 0 && (
+        <ContactList contacts={filteredContacts} onDelete={handleDelete} />
+      )}
     </Container>
   );
 };
